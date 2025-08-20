@@ -5,12 +5,6 @@ from tkinter import *
 from tkinter import ttk
 import calculator_logic as c
 
-oper = ''
-first = 0
-second = 0
-result = 0
-
-
 def calc():
     second = float(entry.get())
     if oper == '+':
