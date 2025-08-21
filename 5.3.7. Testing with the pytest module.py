@@ -22,19 +22,18 @@ def test_add():
 
     with pytest.raises(TypeError):
         c.add("text", 1)
-
     with pytest.raises(TypeError):
         c.add(1, "text")
-def test_subtract():
-    assert c.subtruct(10, 5) == 5
-    assert c.subtruct(-1, 1) == -2
-    assert c.subtruct(-10, -10) == 0
+
+def test_subtract(): 
+    assert c.subtract(10, 5) == 5
+    assert c.subtract(-1, 1) == -2
+    assert c.subtract(-10, -10) == 0
 
     with pytest.raises(TypeError):
-        c.subtruct("text", 1)
-
+        c.subtract("text", 1)
     with pytest.raises(TypeError):
-        c.subtruct(1, "text")
+        c.subtract(1, "text")
 
 
 def test_multiply():
@@ -44,7 +43,6 @@ def test_multiply():
 
     with pytest.raises(TypeError):
         c.multiply("text", 1)
-
     with pytest.raises(TypeError):
         c.multiply(1, "text")
 
@@ -56,10 +54,8 @@ def test_divide():
 
     with pytest.raises(TypeError):
         c.divide("text", 1)
-
     with pytest.raises(TypeError):
         c.divide(1, "text")
-
     with pytest.raises(ZeroDivisionError):
         c.divide(10, 0)
 
